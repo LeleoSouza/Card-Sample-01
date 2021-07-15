@@ -1,0 +1,85 @@
+$fontColor: white;
+.container {
+  position: relative;
+  width: 400px;
+}
+.selected-img {
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+}
+.overlay-btn {
+  border-radius: 10px;
+  position: absolute;
+  right: 6px !important;
+  top: 6px;
+  left: auto;
+  border: 1px solid white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 7px 14px;
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+}
+.card-btn {
+  border-radius: 10px;
+  position: absolute;
+  border: 1px solid white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 6px 10px;
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 1;
+  top: 210px;
+}
+
+.img-container {
+  text-align: center;
+}
+.img-overlay {
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  color: $fontColor;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transition: 0.25s;
+}
+.content-overlay {
+  margin: 10px;
+}
+.img-overlay > * {
+  transition: 0.25s;
+}
+.img-title {
+  width: 350px;
+  font-size: 40px;
+  font-weight: 500;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 1;
+  top: 35%;
+}
+.img-description {
+  font-size: 1.25em;
+  margin-top: 0.25em;
+}
+.action-badge {
+  background-color: dimgray;
+  padding: 3px 6px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+}

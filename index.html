@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/main.min.css" />
+    <title>Topics Cards</title>
+  </head>
+  <body>
+    <!-- card -->
+    <div class="container">
+      <div class="img-container">
+        <img class="selected-img" src="./img/employment-career-development.jpg" alt="picture of a worker" />
+        <div class="img-title" id="card-title">Chicken and Duck</div>
+        <button class="card-btn" id="img-btn" type="button" onclick="handleOpenActions()">Open Actions</button>
+      </div>
+      <div class="img-overlay" id="img-card">
+        <div class="content-overlay">
+          <p class="img-description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime recusandae pariatur excepturi veniam voluptatum impedit magni dolor facere
+            tenetur error alias.
+          </p>
+          <hr />
+          <p>
+            <button class="action-badge" id="badge" type="button" onclick="actionBadge()">Open Actions</button>
+          </p>
+        </div>
+        <button class="overlay-btn" type="button" onclick="handleCloseActions()">X</button>
+      </div>
+    </div>
+    <!-- card -->
+  </body>
+  <script>
+    let overlay = document.getElementById('img-card');
+    let imgBtn = document.getElementById('img-btn');
+    let cardTitle = document.getElementById('card-title');
+    const handleOpenActions = () => {
+      overlay.style.opacity = 1;
+      overlay.style.height = '100%';
+      imgBtn.style.display = 'none';
+      cardTitle.style.display = 'none';
+    };
+    const handleCloseActions = () => {
+      overlay.style.opacity = 0;
+      overlay.style.height = '0';
+      imgBtn.style.display = 'inline';
+      cardTitle.style.display = 'inline';
+    };
+    const actionBadge = () => {
+      console.log('Action Badge');
+    };
+  </script>
+</html>
